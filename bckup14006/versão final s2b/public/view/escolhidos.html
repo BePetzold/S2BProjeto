@@ -1,0 +1,73 @@
+<div class="setores">
+
+    <div class="flex-container">
+        <h1>{{escolhido.Nome}}</h1>
+
+        <h3>E-mail</h3>
+        <p>{{escolhido.Email}}</p>
+
+        <h3>Categoria</h3>
+        <p>{{escolhido.Tipo}}</p>
+
+        <h3>Local</h3>
+        <p>{{escolhido.Local.name}}</p>
+        <p>{{escolhido.Local.enderecoFormatado}}</p>
+
+        <h3>Período</h3>
+        <p>&#128197; {{escolhido.DataInicial | date:'dd/MM/yyyy'}}</p>
+        <p>&#128338; {{escolhido.DataInicial | date:'HH:mm'}}</p>
+
+        <p>&#128197; {{escolhido.DataFinal | date:'dd/MM/yyyy'}}</p>
+        <p>&#128338; {{escolhido.DataFinal | date:'HH:mm'}}</p>
+
+        <p style="padding: 10px;">{{escolhido.Observacao}}</p>
+        <img style="width: 50%; height: 300px;" src="{{escolhido.linkImg}}" alt="Banner de {{escolhido.Nome}}">
+
+        <div id="map" style="width: 50%;float: left;height: 300px;">
+
+        </div>
+    </div>
+
+</div>
+
+<div>
+<script>
+    function initMap() {
+
+        alet('f')
+        const e = new google.maps.Map(document.getElementById("map"), {
+                zoom: 18,
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                }
+            }),
+            o = new google.maps.Geocoder;
+        document.getElementById("locall").addEventListener("click", function () {
+            geocodeAddress(o, e)
+        })
+    }
+
+    function geocodeAddress(e, o) {
+        let n = document.getElementById("locall").innerText;
+        e.geocode({
+            address: n
+        }, function (e, n) {
+            if ("OK" === n) {
+                o.setCenter(e[0].geometry.location);
+                new google.maps.Marker({
+                    map: o,
+                    position: e[0].geometry.location
+                })
+            } else alert("Deu ruim!!!" + n)
+        })
+    }
+</script>
+
+</div>
+
+
+
+
+
+

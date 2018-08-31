@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo {
+    float: left;
+    margin-left: 15%;
+    margin-top: -0.5%;
+    width: 100px;
+}
+
+nav {
+    padding: 1%;
+    list-style-type: none;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: grey;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px #aaaaaa
+}
+
+nav ul{
+    margin: auto;
+    text-align: right;
+    width: 75%;
+    padding: 30px;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 25px;
+}
+
+a:link, a:visited {
+    font-family: Arial, Helvetica, sans-serif;  
+    text-decoration: none;
+    color: #2F4F4F;
+}
+
+a:hover{
+
+    color: #aaaaaa;
+}
+
+h1{
+    margin-top: 8%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+}
+
+article p{
+    margin: 0% 8% 2% 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+article{
+    margin-bottom: 15%;
+}
+
+footer{
+    left: 0;
+    bottom: 0;
+    padding-top: 1%;
+    margin-top: 5%;
+    width: 100%;
+    box-shadow: 5px -5px 5px #aaaaaa;
+    text-align: center;
+}

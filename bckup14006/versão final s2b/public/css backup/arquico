@@ -1,0 +1,21 @@
+.flex-container{
+    width: 90%;
+    margin: auto;
+}
+
+.flex-container ul{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    background-color: #E05A6A;
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-bottom: 20px solid rgb(255, 169, 183);
+}
+
+.flex-container li{
+    list-style-type: none;
+}
